@@ -1,0 +1,1316 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}*/
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body {
+    background-color: whitesmoke;
+    color: #3c4146;
+    display: block;
+    /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+    font-family: 'Quicksand', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    height: 100%;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin: 0;
+}
+  
+@media only screen and (min-width: 0) {
+    html {
+      font-size: 14px;
+    }
+}
+  
+@media only screen and (min-width: 992px) {
+    html {
+      font-size: 14.5px;
+    }
+}
+  
+@media only screen and (min-width: 1200px) {
+    html {
+      font-size: 15px;
+    }
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.1;
+}
+  
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit;
+}
+  
+h1 {
+    font-size: 3.2rem;
+    line-height: 110%;
+    margin: 2.1rem 0 1.68rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+    h1.medium {
+        font-size: 2.2rem;
+    }
+}
+  
+h2 {
+    font-size: 2.56rem;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+}
+  
+h3 {
+    font-size: 1.92rem;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+}
+  
+h4 {
+    font-size: 1.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+}
+  
+h5 {
+    font-size: 0.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+}
+  
+h6 {
+    font-size: 0.5rem;
+    line-height: 110%;
+    margin: 0.5rem 0 0.4rem 0;
+}
+
+a {
+    color: #3c4146;
+    text-decoration: none;
+}
+
+.nav-wrapper {
+    height: 100%;
+    line-height: 64px;
+    position: relative;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 90%;
+}
+
+@media only screen and (min-width: 920px) {
+    .container {
+        width: 890px;
+    } 
+} 
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+.section-heading-top {
+    padding-top: 58px;
+}
+
+.section-heading-bootom {
+    padding-bottom: 58px
+}
+
+.section-title {
+    margin: 0;
+}
+
+nav.mat-toolbar {
+    align-items: center;
+    background-color: #3c4146;
+    box-sizing: border-box;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    line-height: 64px;
+    height: 64px;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+nav.static {
+    background: transparent;
+    box-shadow: none;
+}
+
+.logo {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 960px) {
+    .logo {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+nav ul {
+    margin: 0;
+    padding-left: 0;
+}
+nav ul li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    /*display: block;*/
+    padding: 21px 15px;
+}
+
+nav ul li a.active {
+    color: #E57373;
+    background-color: transparent;
+    border-bottom: 3px solid #E57373;
+}
+
+nav ul li a:hover {
+    color: #EF9A9A;
+    background-color: transparent;
+    border-bottom: 3px solid #EF9A9A;
+}
+
+@media only screen and (max-width: 960px) {
+    .hide-on-med-and-down {
+        display: none !important;
+    }
+}
+
+.mat-raised-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 14px 0;
+    min-width: 88px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 2px;
+}
+
+.primary {
+    background-color: #E57373;
+    color: whitesmoke;
+}
+
+.primary:hover {
+    background-color: #EF5350;
+}
+
+.nav-bar-toggle {
+    display: none;
+    padding: 0;
+}
+
+.arrow {
+    font-size: 2rem;
+}
+
+.whatsapp {
+    color: white;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .nav-bar-toggle{
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        display: block;
+        margin: 18px 0;
+    }
+    
+    .nav-bar-toggle:focus {
+        outline: none;    
+    }
+    
+    .button-bar {
+        background-color: whitesmoke;
+        border-radius: 1px;
+        display: block;
+        height: 2px;
+        margin: 4px 0;
+        width: 22px;
+    }
+}
+
+/*Sidenav*/
+.sidenav {
+    display: none;
+}
+
+@media only screen and (max-width: 960px) {
+    .sidenav-bg {
+        background-color: rgba(0,0,0,.5);
+        filter: alpha(opacity=0);
+        left: 0;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        transition: all .4s;
+        visibility: hidden;
+        width: 100%;
+        z-index: 999;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        -moz-transition: all .4s;
+    }
+    
+    .active-sidenav-bg {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sidenav {
+        background-color: #3c4146;
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        transition: all .4s;
+        transform: translate3d(-300px,0,0);
+        width: 250px;
+        z-index: 999;
+        -moz-transform: translate3d(-300px,0,0);
+        -moz-transition: all .4s;
+        -ms-transform: translate3d(-300px,0,0);
+        -o-transition: all .4s;
+        -webkit-transform: translate3d(-300px,0,0);
+        -webkit-transition: all .4s;
+    }
+
+    .active-sidenav {
+        transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+    .sidenav-item {
+        padding-top: 80px;
+    }
+
+    .sidenav-item ul li {
+        border-bottom: 1px solid #616161;
+        padding-left: 16px;
+    }
+
+    .sidenav-item ul li a {
+        border-bottom: 0 solid #616161!important;
+        display: block;
+        padding: 15px;
+    }
+
+}
+
+/* Home */
+
+article.home {
+    position: relative;
+    background-color: whitesmoke;
+}
+
+@media only screen and (min-width: 840px) {
+    article.home {
+        margin-bottom: 375px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 422px;
+    }
+}
+
+.main {
+    background-color: #0a001f;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: -webkit-box;
+    height: 500px;
+    padding-top: 64px;
+    text-align: center;
+}
+
+.init-title {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+.home-image {
+    background-image: url(../img/inicio-imagen-principal.jpg);
+}
+
+.app-image {
+    background-image: url(../img/obtener-aplicacion.jpg);
+}
+
+.restaurant-image {
+    background-image: url(../img/tienes-un-restaurante.jpg);
+}
+
+.container h1 {
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.container h3 {
+    font-weight: 100;
+}
+
+/* Get App */
+
+.get-app {
+    align-items: center;
+    box-align: center;
+    display: flex;
+    display: box;
+    display: flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    justify-content: space-between;
+    /*padding-bottom: 80px;*/
+    padding: 80px 0;
+    -moz-box-align: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    -o-align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+}
+
+.get-app .left {
+    float: left;
+    margin-right: 3%;
+}
+
+.get-app .right {
+    float: left;
+}
+
+.logos-padding {
+    padding: 40px 0 !important;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 9%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .logos {
+        display: block;
+        text-align: center;
+    }
+}
+
+.img-section {
+    height: 150px;
+    display: block;
+    /*margin: 0 auto;*/
+}
+
+.display-mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 840px) {
+    .display-mobile {
+        display: block;
+    }
+}
+
+.badges {
+    max-width: 164px;
+}
+
+/* Download app */
+.download-section {
+    padding-bottom: 480px;
+}
+
+.img-center {
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 340px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .badges-margin-right {
+        margin-right: 8px;
+    }
+
+    .badges-center {
+        padding: 40px;
+        display: table;
+    }
+
+    .badges-center img {
+        width: 50%;
+    }
+}
+
+/* Restaurant */
+.row {
+    display: flex;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        display: block;
+    }
+}
+
+img.width {
+    width: 100%;
+}
+
+/* Pricing */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .col-md-3 {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .col-md-3 {
+        width: 25%;
+    }
+}
+
+.pricing-row {
+    margin-left: -15px;
+    margin-right: -15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.col {
+    float: left;
+    min-height: 1px;
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 30px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .columns {
+        width: 50%;
+        float: left;
+    }
+    
+    .inner-column {
+        padding-right: 24px;
+    }
+}
+
+.transition-shadow {
+    -webkit-transition: all .3s ease!important;
+    -o-transition: all .3s ease!important;
+    -moz-transition: all .3s ease!important;
+    transition: all .3s ease!important;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.26);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.26);
+    box-shadow: 0 1px 4px rgba(0,0,0,.26);
+}
+
+.s-active:hover {
+    background-color: white;
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.15)!important;
+    -moz-box-shadow: 0 15px 30px rgba(0,0,0,.15)!important;
+    box-shadow: 0 15px 30px rgba(0,0,0,.15)!important;
+}
+
+.thumb-wrap {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.thumb-wrap img {
+    width: 100%;
+}
+
+.pricing-label {
+    position: absolute;
+    width: -webkit-fill-available;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(10%,rgba(0,0,0,.35)),color-stop(90%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(bottom,rgba(0,0,0,.55) 10%,rgba(0,0,0,0) 90%);
+    background: -moz-linear-gradient(bottom,rgba(0,0,0,.55) 10%,rgba(0,0,0,0) 90%);
+    background: -o-linear-gradient(bottom,rgba(0,0,0,.55) 10%,rgba(0,0,0,0) 90%);
+    background: linear-gradient(0deg,rgba(0,0,0,.55) 10%,rgba(0,0,0,0) 90%);
+    color: #fff;
+    padding: 20px;
+}
+
+.content-wrap {
+    padding: 12px;
+}
+
+.actions-wrap {
+    padding: 0 20px 25px;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: #DFDFDF !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #9F9F9F !important;
+    cursor: default;
+}
+/* Footer */
+
+footer {
+    background-color: #3c4146;
+    color: silver;
+}
+
+footer.fixed {
+    position: relative;
+}
+
+@media only screen and (min-width: 840px) {
+    footer.fixed {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+footer h3 {
+    color: white;
+}
+
+.footer-row {
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    display: flex;
+    padding-top: 29px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.copy {
+    text-align: center;
+    background-color: #1d1d21;
+    padding: 20px 0;
+}
+
+.copy span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.logo-footer {
+    width: 90%;
+}
+
+.footer-ca-img {
+    width: 100px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.social-network {
+    width: 25px;
+}
+
+.column {
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.column a {
+    color: silver;
+}
+
+@media only screen and (min-width: 840px) {
+    .display-flex {
+        display: flex;
+        width: 100%;
+    }
+
+    .column {
+        width: 33.333%;
+    }
+}
+
+/* 404 Error*/
+
+html.error {
+    display: table;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body.error {
+    background-color: #3c4146;
+    color: silver;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2em auto;
+}
+
+h1.error {
+    color: whitesmoke;
+    font-size: 8em;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   Restaurant register (Landing page)
+   ========================================================================== */
+.lp {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: silver;
+}
+
+.regiter-img {
+    background-image: url(../img/comida-en-la-mesa.png);
+}
+
+.thanks-img {
+    /*background-image: url(../img/comida-en-la-mesa.png);*/
+    background-color: #3c4146;
+}
+
+.content-lp {
+    height: 100%;
+    padding: 75px 0;
+}
+
+.title-lp {
+    padding: 40px 0;
+}
+
+.title-lp h1 {
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.title-lp h2 {
+    font-size: 20px;
+}
+
+.register-form {
+    background-color: white;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    color: #3c4146;
+    display: block;
+    margin: 0 -36px;
+    z-index: 999;
+}
+
+.freebirdFormviewerViewItemsItemRequiredAsterisk {
+    color: #db4437;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .content-lp {
+        width: 60%;
+    }
+
+    .title-lp {
+        margin-right: 24px;
+        padding: 80px 0;
+    }
+    
+    .register-form {
+        left: 60%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .register-form {
+        margin: 0;
+    }
+}
+
+/**
+ * Styles for the contact form
+ */
+@media only screen and (min-width: 840px) {
+    .home-contact {
+        margin-bottom: 419px !important;
+    }
+}
+
+.width-content {
+    width: 60%;
+}
+
+.register-header {
+    background-color: #3c4146;
+    color: whitesmoke;
+    padding: 24px;
+}
+
+.register-content {
+    padding: 24px;
+}
+
+.form-content {
+    display: block;
+}
+
+.form-contact-static {
+    position: fixed;
+    top: 0;
+    right: 100px;
+}
+
+.form-contact-container {
+    width: 90% !important;
+}
+
+.img-form-contact {
+    width: 100%;
+}
+
+.column-lp {
+    width: 33.333%;
+    float: left;
+}
+
+.subtitle-lp {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.img-columns {
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .form-contact-static{
+        right: 0;
+        margin: 0;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+    .form-contact-static{
+        right: 10px;
+    }
+}
+
+/* ==========================================================================
+   Helper class
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ *
+ */
+.right {
+    float: right !important;
+}
+
+/*
+ *
+ */
+.background-color-white {
+    background-color: white;
+}
+
+/*
+ *
+ */
+.app-flex-filler {
+    flex: 1 1 auto;
+}
+
+/*
+ *
+ */
+.primary-color {
+    color: #e57372 !important;
+}
+
+/*
+ *
+ */
+.text-align-center {
+    text-align: center;
+}
+
+/*
+ *
+ */
+.font-weight-bold {
+    font-weight: bold;
+}
+
+/*
+ *
+ */
+.width-complete {
+    width: -webkit-fill-available;
+}
+
+/*
+ *
+ */
+.clear {
+    clear: both;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+.card-box-shadow {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+.img-border {
+    border: 6px solid #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.24);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.24);
+    box-shadow: 0 1px 4px rgba(0,0,0,.24);
+    width: 100%;
+}
+
+@media only screen and (min-width: 840px) {
+    .margin-right {
+        margin-right: 100px !important;
+    }
+
+    .margin-left {
+        margin-left: 100px !important;
+    }
+}
+
+/*
+ *
+ */
+.center-screem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*
+ *
+ */
+ div.error {
+     color: red;
+     margin-top: -15px;
+     padding: 0;
+     font-size: 0.9em;
+}
+
+/*
+ *
+ */
+.display-none {
+    display: none;
+}
+
+.opacity-cero {
+    opacity: 0;
+}
+    
+/*
+ * Absolute Center Spinner
+ */
+.loading {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
+    z-index: 999;
+}
+  
+/* Transparent Overlay */
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+  
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.input-custom {
+    height: 1.5rem !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
