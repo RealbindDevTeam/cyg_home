@@ -860,6 +860,10 @@ h1.error {
     padding: 75px 0;
 }
 
+.content-lp h2 {
+    font-size: 2.2rem !important;
+}
+
 .title-lp {
     padding: 40px 0;
 }
