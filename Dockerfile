@@ -7,6 +7,6 @@ ADD ./ /app
 # Instala los modulos de npm
 RUN (cd /app && npm install)
 # Expone el puerto 8080 para acceder a la aplicacion
-EXPOSE 3002
+EXPOSE 8080
 # Ejecutar el comando node main.js
 CMD node ./bin/www
