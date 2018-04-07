@@ -14,6 +14,8 @@ var formulario_contacto = require('./routes/formulario-contacto');
 var gracias = require('./routes/gracias');
 var qr = require('./routes/qr');
 var page_not_found = require('./routes/404');
+var robots = require('./routes/robots');
+var sitemap = require('./routes/sitemap');
 
 var app = express();
 
@@ -37,12 +39,8 @@ app.get('/tienes-un-restaurante', tienes_un_restaurante);
 app.get('/formulario-contacto', formulario_contacto);
 app.get('/gracias', gracias);
 app.get('/qr', qr);
-
-// return robot.txt
-app.get('/robots.txt', function (req, res) {
-  res.type('text/plain');
-  res.send("User-agent: *\nDisallow: /formulario-contacto\nDisallow: /gracias\nDisallow: /404\nDisallow: /bin/\nDisallow: /models/\nDisallow: /node_modules/\nDisallow: /app.js\nDisallow: /Dockerfile\nDisallow: /package-lock.json\nDisallow: /package.json\n\nSitemap: https://www.comeygana.com/sitemap.xml");
-});
+app.get('/robots.txt', robots);
+app.get('/sitemap.xml', sitemap);
 
 app.get('*', page_not_found);
 
