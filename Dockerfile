@@ -1,5 +1,11 @@
 # Aplicacion basada en Node.js Version 8.9.3
-FROM node:8.9.3
+FROM node:8.11.1
+# Actualiza paquetes
+RUN apt-get update && apt-get install -y \
+    curl \
+    gcc-4.9 \
+    libxml2 \ 
+    sensible-utils
 # Setea el directorio de trabajo a /app
 WORKDIR /app
 # Copiar el compilado del proyecto a /app
